@@ -109,13 +109,112 @@ const personalMovieDB = {
 
 };
 
-const a = prompt('Один из последних просмотренных фильмов?', ''),
-      b = prompt('На сколько оцените его?', ''),
-      c = prompt('Один из последних просмотренных фильмов?', ''),
-      d = prompt('На сколько оцените его?', '');
+for (let i = 0; i < 2; i++) {
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+    const   a = prompt('Один из последних просмотренных фильмов?', ''),
+            b = prompt('На сколько оцените его?', '');
+
+    if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('Ok!')
+    } else {
+        console.log('Err!')
+        i--;        
+    }
+
+}
+
+// let i = 0
+
+// while (i < 2) {
+//     const   a = prompt('Один из последних просмотренных фильмов?', ''),
+//             b = prompt('На сколько оцените его?', '');
+
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('Ok!')
+//         i++
+//     } else {
+//         console.log('Err!')    
+//     }
+// }
+
+if ( personalMovieDB.count < 10 ) {
+    console.log('Переглянуто доволі мало фільмів')
+} else if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
+    console.log('ви хороший глядач')
+} else if ( personalMovieDB.count > 30 ) {
+    console.log('ви кіноман')
+} else {
+    console.log('error')
+}
 
 
 console.log(personalMovieDB); 
+
+// тернарний оператор
+
+// const num = 50;
+
+// (num === 50) ? console.log('Ok!') : console.log('Err');
+
+// // бінарний
+// 4 + 4
+
+// // унарний
+
+// +'1'
+
+
+
+// const num = 52;
+
+// switch (num) {
+//     case 49:
+//         console.log('No');
+//         break;
+//     case 100:
+//         console.log('No');
+//         break;
+//     case 50:
+//         console.log('is true');
+//         break; 
+//     default:
+//         console.log('default');
+//         break;
+// }
+
+
+// let num = 50;
+
+// while(num <= 55) {
+//     console.log(num);
+//     num++;
+// }
+
+
+// do {
+//     console.log(num);
+//     num++;
+// }
+
+// while(num <= 55);
+
+// for (let i = num; i <= 55; i++) {
+//     console.log(i);
+// }
+
+
+// let num = 50;
+// for (let i = 1; i <= 10; i++) {
+ 
+//     if(i === 6) {
+//         // break;
+//         continue;
+//     }
+
+//     console.log(i)
+
+//     // console.log(num);
+//     // num++;
+// }
