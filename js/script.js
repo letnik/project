@@ -98,31 +98,31 @@
 Проверить, чтобы все работало без ошибок в консоли */
 
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+// const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
 
-};
+// };
 
-for (let i = 0; i < 2; i++) {
+// for (let i = 0; i < 2; i++) {
 
-    const   a = prompt('Один из последних просмотренных фильмов?', ''),
-            b = prompt('На сколько оцените его?', '');
+//     const   a = prompt('Один из последних просмотренных фильмов?', ''),
+//             b = prompt('На сколько оцените его?', '');
 
-    if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50) {
-        personalMovieDB.movies[a] = b;
-        console.log('Ok!')
-    } else {
-        console.log('Err!')
-        i--;        
-    }
+//     if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//         console.log('Ok!')
+//     } else {
+//         console.log('Err!')
+//         i--;        
+//     }
 
-}
+// }
 
 // let i = 0
 
@@ -139,18 +139,18 @@ for (let i = 0; i < 2; i++) {
 //     }
 // }
 
-if ( personalMovieDB.count < 10 ) {
-    console.log('Переглянуто доволі мало фільмів')
-} else if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
-    console.log('ви хороший глядач')
-} else if ( personalMovieDB.count > 30 ) {
-    console.log('ви кіноман')
-} else {
-    console.log('error')
-}
+// if ( personalMovieDB.count < 10 ) {
+//     console.log('Переглянуто доволі мало фільмів')
+// } else if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
+//     console.log('ви хороший глядач')
+// } else if ( personalMovieDB.count > 30 ) {
+//     console.log('ви кіноман')
+// } else {
+//     console.log('error')
+// }
 
 
-console.log(personalMovieDB); 
+// console.log(personalMovieDB); 
 
 // тернарний оператор
 
@@ -218,3 +218,112 @@ console.log(personalMovieDB);
 //     // console.log(num);
 //     // num++;
 // }
+
+// let num = 5;
+
+// function showFirstMessege(hello) {
+//     console.log(hello);
+//     let num = 10;
+//     console.log(num);
+// }
+
+// showFirstMessege('Hello Oss!');
+// console.log(num);
+
+
+
+// function calc(a, b) {
+//     return (a + b);
+// }
+
+// console.log(calc(3, 4))
+// console.log(calc(13, 14))
+// console.log(calc(31, 41))
+
+// const calc = (a, b) => { return a + b };
+
+// console.log(calc(1, 2));
+
+// const logg = "Hello Ossss!";
+// // console.log(logg.toUpperCase());
+// // console.log(logg.indexOf('Oss'));
+// // console.log(logg.slice(6, 12));
+// // console.log(logg.substring(6,12));
+// // console.log(logg.substr(6,6));
+// console.log(logg.length);
+
+// const num = 10/3;
+// console.log(num);
+// console.log(Math.round(num));
+
+
+// const border = '12.3px';
+// console.log(parseInt(border));
+// console.log(parseFloat(border));
+
+
+
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+
+/* Задание на урок:
+
+1) Первую часть задания повторить по уроку
+
+2) Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции
+false - выводит в консоль главный объект программы
+
+3) Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 
+"Ваш любимый жанр под номером ${номер по порядку}". Каждый ответ записывается в массив данных
+genres
+
+P.S. Функции вызывать не обязательно*/
+
+// Код возьмите из предыдущего домашнего задания
+
+
+
+const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+
+};
+
+for (let i = 0; i < 2; i++) {
+
+    const   a = prompt('Один из последних просмотренных фильмов?', ''),
+            b = prompt('На сколько оцените его?', '');
+
+    if (a != null && b != null && a != '' && b != '' && a.length < 50 && b.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('Ok!')
+    } else {
+        console.log('Err!')
+        i--;        
+    }
+
+}
+
+if ( personalMovieDB.count < 10 ) {
+    console.log('Переглянуто доволі мало фільмів')
+} else if ( personalMovieDB.count >= 10 && personalMovieDB.count <= 30 ) {
+    console.log('ви хороший глядач')
+} else if ( personalMovieDB.count > 30 ) {
+    console.log('ви кіноман')
+} else {
+    console.log('error')
+}
+
+
+console.log(personalMovieDB); 
